@@ -66,6 +66,9 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 	var/uses_glasses_colour = 0
 
+	///(Merasmus voice) Bonus Ducks!
+	var/bonusducks = FALSE
+
 	//character preferences
 	/// Keeps track of round-to-round randomization of the character slot, prevents overwriting.
 	var/slot_randomized
