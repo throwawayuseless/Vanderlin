@@ -105,7 +105,8 @@
 			return
 	else
 		if(lastminer.stat_roll(STATKEY_LCK,2,10) && mineralType)
-	//		to_chat(lastminer, span_notice("Bonus ducks!"))
+			if(lastminer.client?.prefs.bonusducks)
+				to_chat(lastminer, span_notice("Bonus ducks!"))
 			new mineralType(src)
 		gets_drilled(lastminer, give_exp = FALSE)
 		QUEUE_SMOOTH_NEIGHBORS(src)
