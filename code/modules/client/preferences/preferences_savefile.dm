@@ -176,6 +176,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	menuoptions		= SANITIZE_LIST(menuoptions)
 	be_special		= SANITIZE_LIST(be_special)
 	key_bindings 	= sanitize_islist(key_bindings, list())
+	bonusducks		= sanitize_integer(bonusducks, 0, 1, initial(bonusducks))
 
 	check_new_keybindings()
 
@@ -242,6 +243,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["tip_delay"], tip_delay)
 	WRITE_FILE(S["ui_scale"], ui_scale)
 	WRITE_FILE(S["key_bindings"], key_bindings)
+	WRITE_FILE(S["bonusducks"], bonusducks)
 	return TRUE
 
 /datum/preferences/proc/_load_species(S)
