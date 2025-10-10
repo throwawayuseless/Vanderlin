@@ -80,6 +80,18 @@
 		else
 			to_chat(src, "ShowRolls Disabled")
 
+/client/verb/bonus_ducks()
+	set category = "Options"
+	set name = "Bonus Ducks"
+
+	if(prefs)
+		prefs.bonusducks = !prefs.bonusducks
+		prefs.save_preferences()
+		if(prefs.bonusducks)
+			to_chat(src, "Bonus Ducks!")
+		else
+			to_chat(src, "No bonus ducks...")
+
 /client/verb/change_master_vol()
 	set category = "Options"
 	set name = "ChangeVolPower"
