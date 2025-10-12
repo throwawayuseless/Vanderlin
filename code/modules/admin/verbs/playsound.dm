@@ -85,12 +85,13 @@
 	set name = "Bonus Ducks"
 
 	if(prefs)
-		prefs.bonusducks = !prefs.bonusducks
-		prefs.save_preferences()
-		if(prefs.bonusducks)
+		if(!prefs.bonusducks)
 			to_chat(src, "Bonus Ducks!")
+			prefs.bonusducks = TRUE
 		else
 			to_chat(src, "No bonus ducks...")
+			prefs.bonusducks = FALSE
+		prefs.save_preferences()
 
 /client/verb/change_master_vol()
 	set category = "Options"
